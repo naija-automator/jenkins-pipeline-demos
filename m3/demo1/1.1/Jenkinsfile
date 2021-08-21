@@ -8,6 +8,7 @@ pipeline {
         stage('Audit tools') {                        
             steps {
                 sh '''
+                  whoami
                   git version
                   docker version
                   dotnet --list-sdks
