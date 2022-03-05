@@ -35,6 +35,7 @@ pipeline {
          archiveArtifacts 'test-results.txt'
          slackSend channel: '#builds',
                    color: 'good',
+                   botUser: true,
                    message: "Release ${env.RELEASE}, success: ${currentBuild.fullDisplayName}."
       }
       failure {
